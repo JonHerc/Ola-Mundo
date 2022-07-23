@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220723 11:47:57.277" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon" source="C:\Users\Usuário\Documents\MeusProjetos\Ola-Mundo\Amazon">
+<suite id="s1-s1" name="Entrarsite" source="C:\Users\Usuário\Documents\MeusProjetos\Ola-Mundo\Amazon\entrarsite.robot">
+<test id="s1-s1-t1" name="Cenário 1: Teste acessar site da da Amazon prime" line="27">
+<kw name="Dado que o usuário acesse o site da Amazon Prime">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220723 11:47:58.541" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<status status="PASS" starttime="20220723 11:47:58.539" endtime="20220723 11:48:08.268"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220723 11:48:08.268" endtime="20220723 11:48:10.137"/>
+</kw>
+<status status="PASS" starttime="20220723 11:47:58.536" endtime="20220723 11:48:10.138"/>
+</kw>
+<kw name="Quando selecionar a opção de login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Login}</arg>
+<arg>15</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220723 11:48:10.235" endtime="20220723 11:48:12.425"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220723 11:48:12.426" level="INFO">Clicking element '//span[@class="nav-icon nav-arrow"]'.</msg>
+<status status="PASS" starttime="20220723 11:48:12.425" endtime="20220723 11:48:14.533"/>
+</kw>
+<status status="PASS" starttime="20220723 11:48:10.233" endtime="20220723 11:48:14.534"/>
+</kw>
+<kw name="Então será encaminhado a tela de login">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${conti}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220723 11:48:15.597" level="INFO">Element '//span[@class="a-button a-button-span12 a-button-primary"]' is displayed.</msg>
+<status status="PASS" starttime="20220723 11:48:14.693" endtime="20220723 11:48:15.598"/>
+</kw>
+<status status="PASS" starttime="20220723 11:48:14.693" endtime="20220723 11:48:15.598"/>
+</kw>
+<status status="PASS" starttime="20220723 11:47:58.496" endtime="20220723 11:48:15.631"/>
+</test>
+<status status="PASS" starttime="20220723 11:47:57.416" endtime="20220723 11:48:15.637"/>
+</suite>
+<status status="PASS" starttime="20220723 11:47:57.283" endtime="20220723 11:48:15.668"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon">Amazon</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Entrarsite">Amazon.Entrarsite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
