@@ -1,61 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220723 11:47:57.277" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220723 11:52:05.306" rpa="false" schemaversion="3">
 <suite id="s1" name="Amazon" source="C:\Users\Usuário\Documents\MeusProjetos\Ola-Mundo\Amazon">
-<suite id="s1-s1" name="Entrarsite" source="C:\Users\Usuário\Documents\MeusProjetos\Ola-Mundo\Amazon\entrarsite.robot">
-<test id="s1-s1-t1" name="Cenário 1: Teste acessar site da da Amazon prime" line="27">
+<suite id="s1-s1" name="Accesslogin" source="C:\Users\Usuário\Documents\MeusProjetos\Ola-Mundo\Amazon\Accesslogin.robot">
+<test id="s1-s1-t1" name="Cenário 2: Realizar login" line="39">
+<kw name="Dado que o usuário preencha seu numero de celular">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${tel}</arg>
+<arg>15</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220723 11:52:06.490" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220723 11:52:06.493" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20220723 11:52:06.488" endtime="20220723 11:52:06.648"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${tel}</arg>
+<arg>11949119521</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220723 11:52:06.649" endtime="20220723 11:52:06.649"/>
+</kw>
+<status status="FAIL" starttime="20220723 11:52:06.487" endtime="20220723 11:52:06.650"/>
+</kw>
+<kw name="Quando clicar em continuar">
+<status status="NOT RUN" starttime="20220723 11:52:06.677" endtime="20220723 11:52:06.678"/>
+</kw>
+<kw name="E digitar a senha">
+<status status="NOT RUN" starttime="20220723 11:52:06.678" endtime="20220723 11:52:06.678"/>
+</kw>
+<kw name="E clicar em mantenha me conectado">
+<status status="NOT RUN" starttime="20220723 11:52:06.702" endtime="20220723 11:52:06.702"/>
+</kw>
+<kw name="Então poderá clicar em login">
+<status status="NOT RUN" starttime="20220723 11:52:06.733" endtime="20220723 11:52:06.734"/>
+</kw>
+<status status="FAIL" starttime="20220723 11:52:06.452" endtime="20220723 11:52:06.834">No browser is open.</status>
+</test>
+<status status="FAIL" starttime="20220723 11:52:05.477" endtime="20220723 11:52:07.188"/>
+</suite>
+<suite id="s1-s2" name="Entrarsite" source="C:\Users\Usuário\Documents\MeusProjetos\Ola-Mundo\Amazon\entrarsite.robot">
+<test id="s1-s2-t1" name="Cenário 1: Teste acessar site da da Amazon prime" line="27">
 <kw name="Dado que o usuário acesse o site da Amazon Prime">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220723 11:47:58.541" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com.br/'.</msg>
-<status status="PASS" starttime="20220723 11:47:58.539" endtime="20220723 11:48:08.268"/>
+<msg timestamp="20220723 11:52:07.644" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<status status="PASS" starttime="20220723 11:52:07.638" endtime="20220723 11:52:15.697"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220723 11:48:08.268" endtime="20220723 11:48:10.137"/>
+<status status="PASS" starttime="20220723 11:52:15.697" endtime="20220723 11:52:16.996"/>
 </kw>
-<status status="PASS" starttime="20220723 11:47:58.536" endtime="20220723 11:48:10.138"/>
+<status status="PASS" starttime="20220723 11:52:07.638" endtime="20220723 11:52:16.996"/>
 </kw>
 <kw name="Quando selecionar a opção de login">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Login}</arg>
 <arg>15</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220723 11:48:10.235" endtime="20220723 11:48:12.425"/>
+<status status="PASS" starttime="20220723 11:52:17.136" endtime="20220723 11:52:18.214"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220723 11:48:12.426" level="INFO">Clicking element '//span[@class="nav-icon nav-arrow"]'.</msg>
-<status status="PASS" starttime="20220723 11:48:12.425" endtime="20220723 11:48:14.533"/>
+<msg timestamp="20220723 11:52:18.215" level="INFO">Clicking element '//span[@class="nav-icon nav-arrow"]'.</msg>
+<status status="PASS" starttime="20220723 11:52:18.214" endtime="20220723 11:52:21.300"/>
 </kw>
-<status status="PASS" starttime="20220723 11:48:10.233" endtime="20220723 11:48:14.534"/>
+<status status="PASS" starttime="20220723 11:52:17.135" endtime="20220723 11:52:21.301"/>
 </kw>
 <kw name="Então será encaminhado a tela de login">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${conti}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220723 11:48:15.597" level="INFO">Element '//span[@class="a-button a-button-span12 a-button-primary"]' is displayed.</msg>
-<status status="PASS" starttime="20220723 11:48:14.693" endtime="20220723 11:48:15.598"/>
+<msg timestamp="20220723 11:52:22.097" level="INFO">Element '//span[@class="a-button a-button-span12 a-button-primary"]' is displayed.</msg>
+<status status="PASS" starttime="20220723 11:52:21.338" endtime="20220723 11:52:22.097"/>
 </kw>
-<status status="PASS" starttime="20220723 11:48:14.693" endtime="20220723 11:48:15.598"/>
+<status status="PASS" starttime="20220723 11:52:21.337" endtime="20220723 11:52:22.098"/>
 </kw>
-<status status="PASS" starttime="20220723 11:47:58.496" endtime="20220723 11:48:15.631"/>
+<status status="PASS" starttime="20220723 11:52:07.625" endtime="20220723 11:52:22.124"/>
 </test>
-<status status="PASS" starttime="20220723 11:47:57.416" endtime="20220723 11:48:15.637"/>
+<status status="PASS" starttime="20220723 11:52:07.531" endtime="20220723 11:52:22.196"/>
 </suite>
-<status status="PASS" starttime="20220723 11:47:57.283" endtime="20220723 11:48:15.668"/>
+<status status="FAIL" starttime="20220723 11:52:05.311" endtime="20220723 11:52:22.200"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Amazon">Amazon</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Entrarsite">Amazon.Entrarsite</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="Amazon">Amazon</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Accesslogin">Amazon.Accesslogin</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Entrarsite">Amazon.Entrarsite</stat>
 </suite>
 </statistics>
 <errors>
